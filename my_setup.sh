@@ -1,12 +1,10 @@
 
-export EXPERIMENT=icarus
+source /cvmfs/uboone.opensciencegrid.org/products/setup_uboone.sh
 
-source /grid/fermiapp/products/artdaq/setup
-setup artdaq v3_03_00 -qe15:s64:prof
-setup mrb
+setup uboonecode v07_07_01_02 -qe17:prof
+source setup_user_python.sh
 
-export MRB_PROJECT=sbndaq
-mrb newDev -v v0_01_00 -qe15:prof:${EXPERIMENT} -p
-source localProducts_*_${EXPERIMENT}/setup
+mrb newDev -p
+source localProducts_*/setup
 
-
+#jupyter nbconvert --to script setup_interactive.ipynb
