@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<!-- Production Project -->
+
+<!DOCTYPE project [
+<!ENTITY file_type "mc">
+<!ENTITY run_type "physics">
+<!ENTITY name "prodgenie_bnb_nue_detsim_optical_uboone">
+<!ENTITY tag "genie_studies">
+]>
+
+<job>
+
+<project name="&name;">
+
+  <!-- Project size -->
+  <numevents>500000</numevents>
+
+  <!-- Operating System -->
+  <os>SL6</os>
+
+  <!-- Batch resources -->
+  <resource>DEDICATED,OPPORTUNISTIC</resource>
+  
+  <!-- Project Version -->
+  <version>v07_07_01_01</version>
+
+  <!-- Larsoft information -->
+  <larsoft>
+    <tag>v07_07_01_01</tag>
+    <qual>e17:prof</qual>
+  </larsoft>
+  
+  <!-- Project stages -->
+
+  <stage name="sim">
+    <fcl>/uboone/app/users/wketchum/dev_areas/mcc9_devs/nue_opfilter_studies/nue_sim_uboone.fcl</fcl>
+    <outdir>/pnfs/uboone/scratch/users/wketchum/genie_studies/bnb_nue</outdir>
+    <logdir>/pnfs/uboone/scratch/users/wketchum/genie_studies/bnb_nue</logdir>
+    <workdir>/pnfs/uboone/scratch/users/wketchum/work/genie_studies/bnb_nue</workdir>
+    <output>bnb_nue_detsim_optical_uboone_%tc.root</output>
+    <numjobs>1000</numjobs>
+    <datatier>simulated</datatier>
+    <memory>4000</memory>
+    <jobsub>--expected-lifetime=8h</jobsub>
+  </stage>  
+  
+  <!-- file type -->
+  <filetype>&file_type;</filetype>
+
+  <!-- run type -->
+  <runtype>&run_type;</runtype>
+
+</project>
+
+
+</job>
+
