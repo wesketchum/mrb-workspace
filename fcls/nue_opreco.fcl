@@ -63,6 +63,11 @@ physics:
      module_type: "UbooneOpticalFilterAna"
      InputTag: "opfiltercommon"
    }
+
+   nuana: {
+     module_type: "MCNeutrinoAna"
+     InputTag: "generator"
+   }
  }
 
  #reco sequence and trigger_paths to be defined elsewhere
@@ -125,7 +130,7 @@ process_name: McRecoStage1
 services.TFileService.fileName: "reco_stage_1_hist.root"
 physics.filters.opfiltercommon: @local::physics.filters.opfiltercommonbnb
 physics.reco: [ @sequence::microboone_reco_mcc8_optical, opfiltercommon ]
-physics.ana: [ opfilterana ]
+physics.ana: [ opfilterana, nuana ]
 physics.trigger_paths: [ reco ]
 physics.end_paths: [ ana ]
 outputs.out1.fileName: "%ifb_%tc_reco1.root"
