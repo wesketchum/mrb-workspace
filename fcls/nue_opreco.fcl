@@ -125,7 +125,7 @@ services.message.destinations :
   }
 }
 
-process_name: McRecoStage1
+process_name: McOpReco
 
 services.TFileService.fileName: "reco_stage_1_hist.root"
 physics.filters.opfiltercommon: @local::physics.filters.opfiltercommonbnb
