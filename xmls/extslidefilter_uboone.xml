@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<!-- Production Project -->
+
+<!DOCTYPE project [
+<!ENTITY file_type "data">
+<!ENTITY run_type "physics">
+<!ENTITY name "extslidfilter_uboone">
+<!ENTITY tag "ext_studies">
+]>
+
+<job>
+
+<project name="&name;">
+
+  <numevents>100000</numevents>
+
+  <maxfluxfilemb>0</maxfluxfilemb>
+
+  <!-- Operating System -->
+  <os>SL6</os>
+
+  <!-- Batch resources -->
+  <resource>DEDICATED,OPPORTUNISTIC</resource>
+  
+  <!-- Project Version -->
+  <version>v07_07_03</version>
+
+  <!-- Larsoft information -->
+  <larsoft>
+    <tag>v07_07_03</tag>
+    <qual>e17:prof</qual>
+    <local>/pnfs/uboone/resilient/users/wketchum/work/extslide_studies/opfilterana.tar</local>
+  </larsoft>
+  
+  <!-- Project stages -->
+
+  <stage name="opreco">
+    <fcl>/uboone/app/users/wketchum/dev_areas/mcc9_devs/nue_opfilter_studies/ext_harvesting_fcls/extslide_full.fcl</fcl>
+    <outdir>/pnfs/uboone/scratch/users/wketchum/extslide_studies/ext_run1_good_2</outdir>
+    <logdir>/pnfs/uboone/scratch/users/wketchum/extslide_studies/ext_run1_good_2</logdir>
+    <workdir>/pnfs/uboone/scratch/users/wketchum/work/extslide_studies/ext_run1_good_2</workdir>
+    <numjobs>50</numjobs>
+    <datatier>reconstructed</datatier>
+    <memory>4000</memory>
+    <inputdef>uboone_wketchum_extunbiased_swizzle_inclusive_v3_goodruns2016</inputdef>
+    <jobsub>--expected-lifetime=4h</jobsub>
+  </stage>  
+  
+  <!-- file type -->
+  <filetype>&file_type;</filetype>
+
+  <!-- run type -->
+  <runtype>&run_type;</runtype>
+
+</project>
+
+
+</job>
+

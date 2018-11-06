@@ -1,0 +1,92 @@
+BEGIN_PROLOG
+
+microboone_dlpmtprecuts: {
+  module_type: "DLPMTPreCuts"
+
+  OpHitProducer: "ophit"
+  BinTickWidth: 6
+  WinStartTick: 190
+  WinEndTick: 320
+  PEThreshold: 20.0
+  VetoStartTick: 60
+  VetoEndTick: 190
+  PMTMaxFrac: 0.6
+
+}
+
+microboone_common_op_precut_bnb: {
+  module_type: "DLPMTPreCuts"
+
+  OpHitProducer: "ophit"
+  BinTickWidth: 6
+  WinStartTick: 190
+  WinEndTick: 320
+  PEThreshold: 20.0
+  VetoStartTick: 60
+  VetoEndTick: 190
+  PMTMaxFrac: 2.0 #disable this
+
+}
+
+#ext is offset by ~24.5 ticks relative to BNB
+microboone_common_op_precut_ext: {
+  module_type: "DLPMTPreCuts"
+
+  OpHitProducer: "ophit"
+  BinTickWidth: 6
+  WinStartTick: 214
+  WinEndTick: 344
+  PEThreshold: 20.0
+  VetoStartTick: 84
+  VetoEndTick: 214
+  PMTMaxFrac: 2.0 #disable this
+
+}
+
+#ext is offset by ~24.5 ticks relative to BNB
+microboone_common_op_precut_ext_slide1: @local::microboone_common_op_precut_ext
+microboone_common_op_precut_ext_slide2: @local::microboone_common_op_precut_ext
+microboone_common_op_precut_ext_slide3: @local::microboone_common_op_precut_ext
+microboone_common_op_precut_ext_slide4: @local::microboone_common_op_precut_ext
+microboone_common_op_precut_ext_slide5: @local::microboone_common_op_precut_ext
+microboone_common_op_precut_ext_slide6: @local::microboone_common_op_precut_ext
+microboone_common_op_precut_ext_slide7: @local::microboone_common_op_precut_ext
+microboone_common_op_precut_ext_slide8: @local::microboone_common_op_precut_ext
+
+microboone_common_op_precut_ext_slide1.VetoStartTick: 214
+microboone_common_op_precut_ext_slide2.VetoStartTick: 344
+microboone_common_op_precut_ext_slide3.VetoStartTick: 474
+microboone_common_op_precut_ext_slide4.VetoStartTick: 604
+microboone_common_op_precut_ext_slide5.VetoStartTick: 734
+microboone_common_op_precut_ext_slide6.VetoStartTick: 864
+microboone_common_op_precut_ext_slide7.VetoStartTick: 994
+microboone_common_op_precut_ext_slide8.VetoStartTick: 1124
+
+microboone_common_op_precut_ext_slide1.VetoEndTick: 344
+microboone_common_op_precut_ext_slide2.VetoEndTick: 474
+microboone_common_op_precut_ext_slide3.VetoEndTick: 604
+microboone_common_op_precut_ext_slide4.VetoEndTick: 734
+microboone_common_op_precut_ext_slide5.VetoEndTick: 864
+microboone_common_op_precut_ext_slide6.VetoEndTick: 994
+microboone_common_op_precut_ext_slide7.VetoEndTick: 1124
+microboone_common_op_precut_ext_slide8.VetoEndTick: 1254
+
+microboone_common_op_precut_ext_slide1.WinStartTick: 344
+microboone_common_op_precut_ext_slide2.WinStartTick: 474
+microboone_common_op_precut_ext_slide3.WinStartTick: 604
+microboone_common_op_precut_ext_slide4.WinStartTick: 734
+microboone_common_op_precut_ext_slide5.WinStartTick: 864
+microboone_common_op_precut_ext_slide6.WinStartTick: 994
+microboone_common_op_precut_ext_slide7.WinStartTick: 1124
+microboone_common_op_precut_ext_slide8.WinStartTick: 1254
+
+microboone_common_op_precut_ext_slide1.WinEndTick: 474
+microboone_common_op_precut_ext_slide2.WinEndTick: 604
+microboone_common_op_precut_ext_slide3.WinEndTick: 734
+microboone_common_op_precut_ext_slide4.WinEndTick: 864
+microboone_common_op_precut_ext_slide5.WinEndTick: 994
+microboone_common_op_precut_ext_slide6.WinEndTick: 1124
+microboone_common_op_precut_ext_slide7.WinEndTick: 1254
+microboone_common_op_precut_ext_slide8.WinEndTick: 1384
+
+END_PROLOG

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<!-- Production Project -->
+
+<!DOCTYPE project [
+<!ENTITY file_type "mc">
+<!ENTITY run_type "physics">
+<!ENTITY name "prodgenie_bnb_nue_opreco_optical_uboone">
+<!ENTITY tag "genie_studies">
+]>
+
+<job>
+
+<project name="&name;">
+
+  <!-- Project size -->
+  <numevents>1000000</numevents>
+
+  <!-- Operating System -->
+  <os>SL6</os>
+
+  <!-- Batch resources -->
+  <resource>DEDICATED,OPPORTUNISTIC,OFFSITE</resource>
+  
+  <!-- Project Version -->
+  <version>v07_07_03</version>
+
+  <!-- Larsoft information -->
+  <larsoft>
+    <tag>v07_07_03</tag>
+    <qual>e17:prof</qual>
+    <local>/pnfs/uboone/resilient/users/wketchum/work/extslide_studies/opfilterana.tar</local>
+  </larsoft>
+  
+  <!-- Project stages -->
+
+  <stage name="sim">
+    <fcl>/uboone/app/users/wketchum/dev_areas/mcc9_devs/nue_opfilter_studies/fcls/prodgenie_bnb_intrinsic_nue_uboone.fcl</fcl>
+    <fcl>/uboone/app/users/wketchum/dev_areas/mcc9_devs/nue_opfilter_studies/fcls/my_wirecell_g4_uboone.fcl</fcl>
+    <fcl>/uboone/app/users/wketchum/dev_areas/mcc9_devs/nue_opfilter_studies/fcls/my_standard_detsim_uboone.fcl</fcl>
+    <fcl>/uboone/app/users/wketchum/dev_areas/mcc9_devs/nue_opfilter_studies/fcls/my_reco_uboone_mcc8_driver.fcl</fcl>
+    <outdir>/pnfs/uboone/scratch/users/wketchum/genie_studies/bnb_nue2</outdir>
+    <logdir>/pnfs/uboone/scratch/users/wketchum/genie_studies/bnb_nue2</logdir>
+    <workdir>/pnfs/uboone/scratch/users/wketchum/work/genie_studies/bnb_nue2</workdir>
+    <output>bnb_nue_optical_uboone_%tc.root</output>
+    <numjobs>2000</numjobs>
+    <datatier>simulated</datatier>
+    <memory>4000</memory>
+    <jobsub>--expected-lifetime=16h</jobsub>
+  </stage>  
+  
+  <!-- file type -->
+  <filetype>&file_type;</filetype>
+
+  <!-- run type -->
+  <runtype>&run_type;</runtype>
+
+</project>
+
+
+</job>
+

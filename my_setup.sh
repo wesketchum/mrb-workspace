@@ -1,7 +1,7 @@
 
 source /cvmfs/uboone.opensciencegrid.org/products/setup_uboone.sh
 
-setup uboonecode v07_07_01_02 -qe17:prof
+setup uboonecode v07_07_03 -qe17:prof
 source setup_user_python.sh
 
 mrb newDev -p

@@ -5,3 +5,7 @@ build*
 srcs/
 **/*.root
 *.root
+*~
+**/*~
+*.db
+**/*.db
