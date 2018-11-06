@@ -1,0 +1,11 @@
+**/.ipynb*
+.ipynb*
+localProducts*
+build*
+srcs/
+**/*.root
+*.root
+*~
+**/*~
+*.db
+**/*.db
